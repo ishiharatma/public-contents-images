@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 500">
+  <!-- Background -->
+  <rect width="1024" height="500" fill="#1C2B35" />
+  
+  <!-- Title -->
+  <text x="40" y="60" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="white">AWS CDK Concept - Comparison with CloudFormation</text>
+  
+  <!-- Left Column - AWS CloudFormation -->
+  <text x="40" y="110" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#99A3AD">AWS CloudFormation</text>
+  
+  <!-- CFN Row 1 - Scripts & Deploy -->
+  <text x="40" y="140" font-family="Arial, sans-serif" font-size="16" fill="#E94E97">Scripts · Deploy one stack at a time</text>
+  <text x="40" y="160" font-family="Arial, sans-serif" font-size="14" fill="#99A3AD">$ aws cloudformation deploy</text>
+  <text x="40" y="180" font-family="Arial, sans-serif" font-size="14" fill="#99A3AD">--stack-name FooBarStack</text>
+  <text x="40" y="200" font-family="Arial, sans-serif" font-size="14" fill="#99A3AD">--template-file foobar.yaml</text>
+  
+  <!-- CFN Box 1 - Stack -->
+  <rect x="50" y="220" width="100" height="60" rx="10" ry="10" fill="#E94E97" />
+  <text x="80" y="255" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white">Stack</text>
+  
+  <!-- CFN Row 2 - Dependencies -->
+  <text x="40" y="300" font-family="Arial, sans-serif" font-size="16" fill="white">· Consider dependencies manually</text>
+  <text x="40" y="320" font-family="Arial, sans-serif" font-size="16" fill="white">  to determine deployment order</text>
+  
+  <!-- CFN Row 3 - Multiple Stacks -->
+  <text x="40" y="350" font-family="Arial, sans-serif" font-size="16" fill="white">· Tools needed to deploy multiple</text>
+  <text x="40" y="370" font-family="Arial, sans-serif" font-size="16" fill="white">  stacks together (Makefile, CodePipeline, etc.)</text>
+  
+  <!-- CFN Row 4 - Modules -->
+  <text x="40" y="400" font-family="Arial, sans-serif" font-size="16" fill="white">· CloudFormation Modules for</text>
+  <text x="40" y="420" font-family="Arial, sans-serif" font-size="16" fill="white">  encapsulation and reuse</text>
+  
+  <!-- Right Column - AWS CDK -->
+  <text x="400" y="110" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#99A3AD">AWS CDK</text>
+  
+  <!-- CDK Box 1 - App -->
+  <rect x="400" y="130" width="120" height="60" rx="10" ry="10" fill="#E94E97" />
+  <text x="433" y="165" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white">App</text>
+  
+  <!-- CDK Row 1 - App Description -->
+  <text x="540" y="140" font-family="Arial, sans-serif" font-size="16" fill="white">· Group multiple stacks and deploy</text>
+  <text x="540" y="160" font-family="Arial, sans-serif" font-size="16" fill="white">  as one application</text>
+  <text x="540" y="180" font-family="Arial, sans-serif" font-size="16" fill="white">  (stacks configured within the app)</text>
+  
+  <!-- Connection Line 1 -->
+  <line x1="450" y1="190" x2="450" y2="220" stroke="#E94E97" stroke-width="2" />
+  
+  <!-- CDK Box 2 - Stack -->
+  <rect x="400" y="220" width="120" height="60" rx="10" ry="10" fill="#E94E97" />
+  <text x="433" y="255" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white">Stack</text>
+  
+  <!-- CDK Row 2 - Stack Description -->
+  <text x="540" y="230" font-family="Arial, sans-serif" font-size="16" fill="white">· CDK resolves dependencies between</text>
+  <text x="540" y="250" font-family="Arial, sans-serif" font-size="16" fill="white">  stacks and determines deployment order</text>
+  
+  <!-- Connection Line 2 -->
+  <line x1="450" y1="280" x2="450" y2="310" stroke="#E94E97" stroke-width="2" />
+  
+  <!-- CDK Box 3 - Construct -->
+  <rect x="400" y="310" width="120" height="60" rx="10" ry="10" fill="#E94E97" />
+  <text x="420" y="345" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white">Construct</text>
+  
+  <!-- CDK Row 3 - Construct Description -->
+  <text x="540" y="320" font-family="Arial, sans-serif" font-size="16" fill="white">· Abstraction and reuse with Constructs</text>
+  <text x="540" y="340" font-family="Arial, sans-serif" font-size="16" fill="white">· Add specific Stage to group multiple Stacks</text>
+  <text x="540" y="360" font-family="Arial, sans-serif" font-size="16" fill="white">  for easier environment management</text>
+  <text x="540" y="380" font-family="Arial, sans-serif" font-size="16" fill="white">  (Dev, Staging, Prod...)</text>
+    
+</svg>
