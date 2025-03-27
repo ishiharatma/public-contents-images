@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f5f5f5"/>
+  
+  <!-- Title with hand-drawn style -->
+  <g transform="translate(400, 60)">
+    <rect x="-300" y="-30" width="600" height="60" rx="15" ry="15" fill="#FFD23F" stroke="#333" stroke-width="3" stroke-dasharray="2"/>
+    <text x="0" y="15" font-family="Comic Sans MS, cursive" font-size="28" font-weight="bold" text-anchor="middle" fill="#333">AWS CDK (TypeScript) Development Flow</text>
+  </g>
+  
+  <!-- Main Flow Diagram with hand-drawn elements -->
+  <g transform="translate(80, 150)">
+    <!-- Initialize Box -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="120" height="80" rx="10" ry="10" fill="#FF9E00" stroke="#333" stroke-width="3" transform="rotate(-2)" style="filter: drop-shadow(3px 3px 2px rgba(0,0,0,0.3))"/>
+      <text x="60" y="45" font-family="Comic Sans MS, cursive" font-size="20" font-weight="bold" text-anchor="middle" fill="#333" transform="rotate(-2)">Initialize</text>
+      <path d="M 10,70 Q 20,65 30,75 Q 40,85 50,75" stroke="#333" fill="none" stroke-width="2"/>
+    </g>
+    
+    <!-- Code Box -->
+    <g transform="translate(180, 0)">
+      <rect x="0" y="0" width="120" height="80" rx="10" ry="10" fill="#3DB2FF" stroke="#333" stroke-width="3" transform="rotate(2)" style="filter: drop-shadow(3px 3px 2px rgba(0,0,0,0.3))"/>
+      <text x="60" y="45" font-family="Comic Sans MS, cursive" font-size="20" font-weight="bold" text-anchor="middle" fill="#333" transform="rotate(2)">Code</text>
+      <path d="M 10,25 L 30,25 L 30,15 L 50,15 L 50,25 L 70,25" stroke="#333" fill="none" stroke-width="2"/>
+      <text x="60" y="65" font-family="Comic Sans MS, cursive" font-size="14" text-anchor="middle" fill="#333">{code}</text>
+    </g>
+    
+    <!-- Test Box -->
+    <g transform="translate(360, 0)">
+      <rect x="0" y="0" width="120" height="80" rx="10" ry="10" fill="#B983FF" stroke="#333" stroke-width="3" transform="rotate(-1)" style="filter: drop-shadow(3px 3px 2px rgba(0,0,0,0.3))"/>
+      <text x="60" y="45" font-family="Comic Sans MS, cursive" font-size="20" font-weight="bold" text-anchor="middle" fill="#333" transform="rotate(-1)">Test</text>
+      <ellipse cx="30" cy="65" rx="15" ry="8" stroke="#333" fill="none" stroke-width="2"/>
+      <path d="M 50,65 L 60,60 L 90,70" stroke="#333" fill="none" stroke-width="2"/>
+    </g>
+    
+    <!-- Deploy Box -->
+    <g transform="translate(540, 0)">
+      <rect x="0" y="0" width="120" height="80" rx="10" ry="10" fill="#59CE8F" stroke="#333" stroke-width="3" transform="rotate(1)" style="filter: drop-shadow(3px 3px 2px rgba(0,0,0,0.3))"/>
+      <text x="60" y="45" font-family="Comic Sans MS, cursive" font-size="20" font-weight="bold" text-anchor="middle" fill="#333" transform="rotate(1)">Deploy</text>
+      <path d="M 30,60 L 40,70 L 50,60 L 60,70 L 70,60 L 80,70" stroke="#333" fill="none" stroke-width="2"/>
+    </g>
+    
+    <!-- Arrows connecting steps -->
+    <g>
+      <!-- Initialize to Code -->
+      <path d="M 125,40 C 145,40 155,40 175,40" stroke="#333" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+      <polygon points="175,40 165,35 165,45" fill="#333"/>
+      
+      <!-- Code to Test -->
+      <path d="M 305,40 C 325,40 335,40 355,40" stroke="#333" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+      <polygon points="355,40 345,35 345,45" fill="#333"/>
+      
+      <!-- Test to Deploy -->
+      <path d="M 485,40 C 505,40 515,40 535,40" stroke="#333" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+      <polygon points="535,40 525,35 525,45" fill="#333"/>
+      
+      <!-- Deploy back to Code (feedback loop) -->
+      <path d="M 600,80 C 600,150 240,150 240,85" stroke="#333" stroke-width="3" fill="none" stroke-dasharray="7,3" marker-end="url(#arrowhead)"/>
+      <polygon points="240,85 235,95 245,95" fill="#333"/>
+      <text x="400" y="170" font-family="Comic Sans MS, cursive" font-size="16" text-anchor="middle" fill="#333">Iterate!</text>
+    </g>
+  </g>
+  
+  <!-- Details Sections -->
+  <g transform="translate(80, 280)">
+    <!-- Initialize Details -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="160" height="200" rx="10" ry="10" fill="#FFF4CF" stroke="#FF9E00" stroke-width="2" stroke-dasharray="5,2"/>
+      <text x="80" y="30" font-family="Comic Sans MS, cursive" font-size="16" font-weight="bold" text-anchor="middle" fill="#333">Initialize</text>
+      
+      <text x="10" y="60" font-family="Comic Sans MS, cursive" font-size="14" fill="#333">• mkdir cdk-sample</text>
+      <text x="10" y="90" font-family="Comic Sans MS, cursive" font-size="14" fill="#333">• cd cdk-sample</text>
+      <text x="10" y="120" font-family="Comic Sans MS, cursive" font-size="14" fill="#333">• npx aws-cdk init</text>
+      <text x="10" y="150" font-family="Comic Sans MS, cursive" font-size="14" fill="#333">• npx aws-cdk</text>
+      <text x="10" y="180" font-family="Comic Sans MS, cursive" font-size="14" fill="#333">  bootstrap</text>
+      
+      <!-- Little AWS icon drawing -->
+      <path d="M 120,170 L 145,170 L 135,185 L 110,185 Z" fill="#FF9900" stroke="#333" stroke-width="1"/>
+    </g>
+    
+    <!-- Code Details -->
+    <g transform="translate(180, 0)">
+      <rect x="0" y="0" width="160" height="200" rx="10" ry="10" fill="#D6EEFF" stroke="#3DB2FF" stroke-width="2" stroke-dasharray="5,2"/>
+      <text x="80" y="30" font-family="Comic Sans MS, cursive" font-size="16" font-weight="bold" text-anchor="middle" fill="#333">Code</text>
+      
+      <text x="10" y="60" font-family="Comic Sans MS, cursive" font-size="14" fill="#333">• lib/stack.ts</text>
+      <text x="10" y="90" font-family="Comic Sans MS, cursive" font-size="14" fill="#333">• Add resources</text>
+      <text x="10" y="120" font-family="Comic Sans MS, cursive" font-size="14" fill="#333">• Lambda</text>
+      <text x="10" y="150" font-family="Comic Sans MS, cursive" font-size="14" fill="#333">• DynamoDB</text>
+      <text x="10" y="180" font-family="Comic Sans MS, cursive" font-size="14" fill="#333">• ApiGateway etc.</text>
+      
+      <!-- Code squiggle -->
+      <path d="M 120,150 L 125,150 Q 130,145 135,150 Q 140,155 145,150 L 150,150" stroke="#333" fill="none" stroke-width="1"/>
+    </g>
+    
+    <!-- Test Details -->
+    <g transform="translate(360, 0)">
+      <rect x="0" y="0" width="160" height="200" rx="10" ry="10" fill="#F2DEFF" stroke="#B983FF" stroke-width="2" stroke-dasharray="5,2"/>
+      <text x="80" y="30" font-family="Comic Sans MS, cursive" font-size="16" font-weight="bold" text-anchor="middle" fill="#333">Test</text>
+      
+      <text x="10" y="60" font-family="Comic Sans MS, cursive" font-size="14" fill="#333">• npx aws-cdk synth</text>
+      <text x="10" y="90" font-family="Comic Sans MS, cursive" font-size="14" fill="#333">• Check CloudFormation</text>
+      <text x="10" y="120" font-family="Comic Sans MS, cursive" font-size="14" fill="#333">• Jest tests</text>
+      <text x="10" y="150" font-family="Comic Sans MS, cursive" font-size="14" fill="#333">• Unit testing</text>
+      <text x="10" y="180" font-family="Comic Sans MS, cursive" font-size="14" fill="#333">• Integration tests</text>
+      
+      <!-- Test checkmark -->
+      <path d="M 120,150 L 130,170 L 150,130" stroke="#B983FF" fill="none" stroke-width="3"/>
+    </g>
+    
+    <!-- Deploy Details -->
+    <g transform="translate(540, 0)">
+      <rect x="0" y="0" width="160" height="200" rx="10" ry="10" fill="#D1FFE0" stroke="#59CE8F" stroke-width="2" stroke-dasharray="5,2"/>
+      <text x="80" y="30" font-family="Comic Sans MS, cursive" font-size="16" font-weight="bold" text-anchor="middle" fill="#333">Deploy</text>
+      
+      <text x="10" y="60" font-family="Comic Sans MS, cursive" font-size="14" fill="#333">• npx aws-cdk deploy</text>
+      <text x="10" y="90" font-family="Comic Sans MS, cursive" font-size="14" fill="#333">• CloudFormation</text>
+      <text x="10" y="120" font-family="Comic Sans MS, cursive" font-size="14" fill="#333">• Deploy to AWS</text>
+      <text x="10" y="150" font-family="Comic Sans MS, cursive" font-size="14" fill="#333">• Monitor changes</text>
+      <text x="10" y="180" font-family="Comic Sans MS, cursive" font-size="14" fill="#333">• Check deployment</text>
+      
+      <!-- Cloud drawing -->
+      <path d="M 120,150 Q 130,140 140,145 Q 150,140 145,155 Q 155,165 140,165 Q 135,175 120,165 Q 110,170 115,160 Q 105,150 120,150 Z" fill="#D1FFE0" stroke="#59CE8F" stroke-width="2"/>
+    </g>
+  </g>
+  
+  <!-- Notes and Tips -->
+  <g transform="translate(425, 525)">
+    <rect x="-320" y="-30" width="640" height="60" rx="15" ry="15" fill="#FFE3E1" stroke="#333" stroke-width="2" stroke-dasharray="3,2"/>
+    <text x="0" y="5" font-family="Comic Sans MS, cursive" font-size="16" font-weight="bold" text-anchor="middle" fill="#333">CDK Iterative Development Process</text>
+    <text x="0" y="25" font-family="Comic Sans MS, cursive" font-size="14" text-anchor="middle" fill="#333">Define infrastructure as code, test, deploy, and continuously improve</text>
+  </g>
+
+</svg>
